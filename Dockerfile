@@ -22,7 +22,7 @@ RUN tar -xjf /tac_plus.tar.bz2 && \
 FROM base
 COPY --from=build /tacacs /tacacs
 COPY --from=build /mavis_tacplus_radius.pl /usr/local/lib/mavis_tacplus_radius.pl
-COPY tac_base.cfg $CONF_FILE
+COPY tac_plus.cfg $CONF_FILE
 COPY tac_user.cfg /etc/tac_plus/tac_user.cfg
 COPY entrypoint.sh /entrypoint.sh 
 
